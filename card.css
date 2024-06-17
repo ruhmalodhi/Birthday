@@ -1,0 +1,377 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background-image: url(image\ 1\ \(2\).png);
+}
+.options {
+  margin-left: -10px;
+  margin-top: -550px;
+  width: 100%;
+  background-color: #ce98b3;
+}
+
+.options ul {
+  margin-top: -50px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+.options ul li {
+  margin-top: -50px;
+  display: inline;
+}
+
+.options ul li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.options ul li a:hover {
+  background-color: #806171;
+}
+
+.container {
+  position: relative;
+}
+
+.valentines {
+  position: relative;
+  top: 50px;
+  cursor: pointer;
+  animation: up 3s linear infinite;
+}
+
+@keyframes up {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-30px);
+  }
+}
+
+.envelope {
+  margin-right: 480px;
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background-color: #e9b1cd;
+}
+
+.envelope:before {
+  background-color: #e9b1cd;
+  content: "";
+  position: absolute;
+  width: 212px;
+  height: 212px;
+  transform: rotate(45deg);
+  top: -105px;
+  left: 44px;
+  border-radius: 30px 0 0 0;
+}
+
+.card {
+  position: absolute;
+  background-color: rgb(255, 216, 223);
+  width: 270px;
+  height: 170px;
+  top: 5px;
+  left: 15px;
+  box-shadow: -5px -5px 100px rgba(0, 0, 0, 0.4);
+}
+
+.card:before {
+  content: "";
+  position: absolute;
+  border: 2px solid #003049;
+  width: 250px;
+  height: 153px;
+  left: 9px;
+  top: 7px;
+}
+
+.text {
+  position: absolute;
+  font-family: 'Brush Script MT', cursive;
+  font-size: 25px;
+  line-height: 25px;
+  top: 10px;
+  left: 20px;
+  color: #003049;
+}
+
+.heart {
+  background-color: #d62879;
+  display: inline-block;
+  height: 30px;
+  margin: 0 10px;
+  position: relative;
+  top: 110px;
+  left: 105px;
+  transform: rotate(-45deg);
+  width: 30px;
+}
+
+.heart:before,
+.heart:after {
+  content: "";
+  background-color: #d62828;
+  border-radius: 50%;
+  height: 30px;
+  position: absolute;
+  width: 30px;
+}
+
+.heart:before {
+  top: -15px;
+  left: 0;
+}
+
+.heart:after {
+  left: 15px;
+  top: 0;
+}
+
+.hearts {
+  position: absolute;
+}
+
+.one, .two, .three, .four, .five {
+  background-color: rgb(158, 46, 115);
+  display: inline-block;
+  height: 10px;
+  margin: 0 10px;
+  position: relative;
+  transform: rotate(-45deg);
+  width: 10px;
+  top: -150px;
+}
+
+.one:before,
+.one:after, .two:before, .two:after, .three:before, .three:after, .four:before, .four:after, .five:before, .five:after {
+  content: "";
+  background-color: rgb(158, 46, 115);
+  border-radius: 50%;
+  height: 10px;
+  position: absolute;
+  width: 10px;
+}
+
+.one:before, .two:before, .three:before, .four:before, .five:before {
+  top: -5px;
+  left: 0;
+}
+
+.one:after, .two:after, .three:after, .four:after, .five:after {
+  left: 5px;
+  top: 0;
+}
+
+.one {
+  left: 10px;
+  animation: heart 1s ease-out infinite;
+}
+
+.two {
+  left: 30px;
+  animation: heart 2s ease-out infinite;
+}
+
+.three {
+  left: 50px;
+  animation: heart 1.5s ease-out infinite;
+}
+
+.four {
+  left: 70px;
+  animation: heart 2.3s ease-out infinite;
+}
+
+.five {
+  left: 90px;
+  animation: heart 1.7s ease-out infinite;
+}
+
+@keyframes heart {
+  0% {
+      transform: translateY(0) rotate(-45deg) scale(0.3);
+      opacity: 1;
+  }
+  100% {
+      transform: translateY(-150px) rotate(-45deg) scale(1.3);
+      opacity: 0.5;
+  }
+}
+
+.front {
+  position: absolute;
+  border-right: 180px solid #ce98b3;
+  border-top: 95px solid transparent;
+  border-bottom: 100px solid transparent;
+  left: 120px;
+  top: 5px;
+  width: 0;
+  height: 0;
+  z-index: 10;
+}
+
+.front:before {
+  position: absolute;
+  content: "";
+  border-left: 300px solid #e9b1cd;
+  border-top: 195px solid transparent;
+  left: -120px;
+  top: -95px;
+  width: 0;
+  height: 0;
+}
+
+.shadow {
+  position: absolute;
+  width: 330px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin-top: 30%;
+  animation: scale 3s linear infinite;
+  z-index: -1;
+}
+
+@keyframes scale {
+  0%, 100% {
+      transform: scaleX(1);
+  }
+  50% {
+      transform: scaleX(0.85);
+  }
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .options {
+      margin-top: -500px;
+  }
+  .envelope {
+      margin-right: 300px;
+  }
+}
+
+@media (max-width: 992px) {
+  .options {
+      margin-top: -450px;
+  }
+  .envelope {
+      margin-right: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .options {
+      margin-top: -400px;
+  }
+  .envelope {
+      margin-right: 100px;
+  }
+  .valentines {
+      top: 30px;
+  }
+  .text {
+      font-size: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .options {
+      margin-top: -350px;
+  }
+  .envelope {
+      margin-right: 50px;
+      width: 250px;
+      height: 170px;
+  }
+  .envelope:before {
+      width: 177px;
+      height: 177px;
+      top: -88px;
+      left: 36px;
+  }
+  .card {
+      width: 220px;
+      height: 140px;
+      top: 5px;
+      left: 12px;
+  }
+  .card:before {
+      width: 200px;
+      height: 123px;
+      left: 7px;
+      top: 5px;
+  }
+  .text {
+      font-size: 18px;
+      top: 8px;
+      left: 18px;
+  }
+  .heart {
+      height: 25px;
+      width: 25px;
+      top: 95px;
+      left: 88px;
+  }
+  .heart:before, .heart:after {
+      height: 25px;
+      width: 25px;
+  }
+}
+
+@media (max-width: 400px) {
+  .options {
+      margin-top: -300px;
+  }
+  .envelope {
+      margin-right: 20px;
+      width: 200px;
+      height: 130px;
+  }
+  .envelope:before {
+      width: 141px;
+      height: 141px;
+      top: -70px;
+      left: 28px;
+  }
+  .card {
+      width: 170px;
+      height: 110px;
+      top: 4px;
+      left: 10px;
+  }
+  .card:before {
+      width: 160px;
+      height: 93px;
+      left: 5px;
+      top: 3px;
+  }
+  .text {
+      font-size: 15px;
+      top: 6px;
+      left: 15px;
+  }
+  .heart {
+      height: 20px;
+      width: 20px;
+      top: 80px;
+      left: 70px;
+  }
+  .heart:before, .heart:after {
+      height: 20px;
+      width: 20px;
+  }
+}
