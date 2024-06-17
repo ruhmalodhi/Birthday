@@ -331,6 +331,18 @@ body {
       width: 25px;
   }
 }
+@media (max-width: 1080px) {
+  .options {
+      margin-top: -800px;
+  }
+  .envelope {
+      margin-right: 350px;
+  }
+  .shadow{
+    margin-right:-70px;
+  }
+}
+
 
 @media (max-width: 400px) {
   .options {
